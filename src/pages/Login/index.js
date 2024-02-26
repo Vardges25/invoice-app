@@ -1,8 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "bootstrap/dist/css/bootstrap.min.css";
-import './login.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+import './index.scss';
 
 const user = {
   login: '1',
@@ -22,7 +23,7 @@ function Login({setIsLoggedIn}) {
 
   return (
     <>
-      <Form.Group className="mb-3 " controlId="formBasicEmail">
+      <Form.Group className="mb-3 inputLogin" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control value={login} onChange={(e) => setLogin(e.currentTarget.value)} type="text" placeholder="Enter email" />
         <Form.Text className="text-muted">
@@ -30,7 +31,7 @@ function Login({setIsLoggedIn}) {
         </Form.Text>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3 inputLogin" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control value={password} onChange={(e) => setPassword(e.currentTarget.value)} type="password" placeholder="Password" />
       </Form.Group>
